@@ -62,7 +62,6 @@ def find_gap_values(length):
     while gap > 1:
         gap //= 2
         gap_values.append(gap)
-    print(gap_values)
     return gap_values
 
 # To show results
