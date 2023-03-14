@@ -64,9 +64,10 @@ for key in testcases.keys():
     print('--------------------------------------------')
     results[key] = [total_time, total_timeit]
 
-with open('merge.csv', 'w', newline='') as file:
+# Output a csv file to store results
+with open('cs102_assignment1/merge.csv', 'w', newline='') as file:
     writer = csv.writer(file)
+    writer.writerow(['1:Shuffled', '2:Ascended', '3:Descended'])
+    writer.writerow(['TESTCASENAME', 'TOTALTIME', 'TOTALTIMEIT'])
     for key in results.keys():
         writer.writerow([key, results[key][0], results[key][1]])
-
-
