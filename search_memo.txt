@@ -1,0 +1,4 @@
+linear search ==　almost 1/2n
+Binary search - O(logn)
+1. choose the middle by summing the smallest and largest of the index values
+2. Compare the value of the middle index and the target value

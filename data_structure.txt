@@ -1,0 +1,6 @@
+Dynamic Array (modifiable length, modifiable positions)
+
+Node
+1. number (to be stored itself)
+2. next (info about the next node)
+
