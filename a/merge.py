@@ -24,6 +24,15 @@ def merge_sort(testcase):
         return testcase
 
 def merge(left_half, right_half):
+    """Function to merge separated elements
+
+    Args:
+        left_half (list): the elements at the lower positions
+        right_half (list): the elements at the higher positions
+
+    Returns:
+        list: a sorted testcase
+    """
     result = []
     i = j = 0
     while i < len(left_half) and j < len(right_half):
