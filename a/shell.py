@@ -1,0 +1,67 @@
+import time 
+import timeit
+from testcases import create_testcases
+
+# Create testcases
+num_testcases_dif_digits = 3
+num_testcases_same_digits = 3
+testcases = create_testcases(num_testcases_dif_digits, num_testcases_same_digits)
+
+
+def insertion_sort_interleaved(testcase, start_index, gap):
+    """Function to sort elements at fixed distances
+
+    Args:
+        testcase (list): a testcase
+        start_index (int): the start index to sort
+        gap (int): the distance between elements
+
+    Returns:
+        int: a swapped element
+    """
+    swaps = 0
+    for i in range(start_index + gap, len(testcase), gap):
+        j = i
+        while (j - gap >= start_index) and (testcase[j] < testcase[j - gap]):
+            swaps += 1
+            temp = testcase[j]
+            testcase[j] = testcase[j - gap]
+            testcase[j - gap] = temp
+            j = j - gap
+    return swaps
+
+
+def shell_sort(testcase):
+    """Shell sort
+
+    Args:
+        testcase (list): a testcase
+        gap_values (list): the fixed distances btetween elements
+
+    Returns:
+        list: _description_
+    """
+    swaps = []
+    gap_values  = find_gap_values(len(testcase))
+    for gap_value in gap_values:
+        for i in range(gap_value):
+            swaps.append(insertion_sort_interleaved(testcase, i, gap_value))
+    return swaps
+
+def find_gap_values(length):
+    gap = length
+    gap_values = []
+    while gap > 0:
+        gap //= 2
+        gap_values.append(gap)
+    return gap_values
+
+for key in testcases.keys():
+    start_time = time.time_ns()
+    start_time2 = timeit.default_timer()
+    result = shell_sort(testcases[key])
+    print(key)
+    # report times
+    print("Total time: " + str((time.time_ns()-start_time)/1000000000))
+    print("Doublecheck time using timeit: ", timeit.default_timer() - start_time2 )
+    print('--------------------------------------------')
