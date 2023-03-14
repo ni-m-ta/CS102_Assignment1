@@ -7,7 +7,7 @@ num_testcases_dif_digits = 3
 num_testcases_same_digits = 3
 testcases = create_testcases(num_testcases_dif_digits, num_testcases_same_digits)
 
-# MergeSort
+
 def merge_sort(testcase):
     """Merge sort
 
