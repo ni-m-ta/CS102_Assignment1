@@ -84,7 +84,7 @@ for key in testcases.keys():
     results[key] = [total_time, total_timeit]
 
 # Output a csv file to store results
-with open('cs102_assignment1/merge.csv', 'w', newline='') as file:
+with open('cs102_assignment1/quick.csv', 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(['1:Shuffled', '2:Ascended', '3:Descended'])
     writer.writerow(['TESTCASENAME', 'TOTALTIME', 'TOTALTIMEIT'])
