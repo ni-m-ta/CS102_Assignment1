@@ -41,19 +41,19 @@ def shell_sort(testcase):
     Returns:
         list: _description_
     """
-    swaps = []
     gap_values  = find_gap_values(len(testcase))
     for gap_value in gap_values:
         for i in range(gap_value):
-            swaps.append(insertion_sort_interleaved(testcase, i, gap_value))
-    return swaps
+            (insertion_sort_interleaved(testcase, i, gap_value))
+    return testcase
 
 def find_gap_values(length):
     gap = length
     gap_values = []
-    while gap > 0:
+    while gap > 1:
         gap //= 2
         gap_values.append(gap)
+    print(gap_values)
     return gap_values
 
 for key in testcases.keys():
