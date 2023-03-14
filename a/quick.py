@@ -66,7 +66,7 @@ def quick_sort(testcase, start_index, end_index):
     # Recursively sort the right segment
     quick_sort(testcase, high + 1, end_index)
 
-
+# To show results
 for key in testcases.keys():
     start_time = time.time_ns()
     start_time2 = timeit.default_timer()

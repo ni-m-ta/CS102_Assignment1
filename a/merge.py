@@ -47,6 +47,7 @@ def merge(left_half, right_half):
     result += right_half[j:]
     return result
 
+# To show results
 for key in testcases.keys():
     start_time = time.time_ns()
     start_time2 = timeit.default_timer()

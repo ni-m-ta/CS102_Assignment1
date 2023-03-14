@@ -25,9 +25,9 @@ def selection_sort(testcase):
         temp = testcase[i]
         testcase[i] = testcase[index_smallest]
         testcase[index_smallest] = temp
-
     return testcase
 
+# To show results
 for key in testcases.keys():
     start_time = time.time_ns()
     start_time2 = timeit.default_timer()

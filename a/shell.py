@@ -48,6 +48,14 @@ def shell_sort(testcase):
     return testcase
 
 def find_gap_values(length):
+    """Function to store gaps
+
+    Args:
+        length (int): the length of a testcase
+
+    Returns:
+        list: the suitable gaps
+    """
     gap = length
     gap_values = []
     while gap > 1:
@@ -56,6 +64,7 @@ def find_gap_values(length):
     print(gap_values)
     return gap_values
 
+# To show results
 for key in testcases.keys():
     start_time = time.time_ns()
     start_time2 = timeit.default_timer()
