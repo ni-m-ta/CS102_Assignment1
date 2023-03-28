@@ -64,6 +64,33 @@ class SLL:
             self.__tail.setNext(newNode)
             self.__tail = self.__tail.getNext()
 
+    def insert(self, x, y):
+        traverser = self.__head
+        counter = 0
+        while  counter < x-1:
+            traverser = traverser.getNext()
+            counter += 1
+        preNode = traverser
+        if self.__head is None:
+            self.add2Head(y)
+        elif self.__tail == preNode:
+            self.add2Tail(y)
+        else:
+            newNode = Node(y)
+            newNode.setNext(preNode.getNext())
+            preNode.setNext(newNode)
+
+    def remove(self, x):
+        traverser = self.__head
+        while traverser.getValue() != x:
+            preNode = traverser
+            traverser = traverser.getNext()
+        curNode = traverser
+        if self.__head is None:
+            print('It does not work')
+        else:
+            preNode.setNext(curNode.getNext())
+
 
     def display(self):
         # case: list is empty
@@ -107,4 +134,7 @@ s1.add2Tail(65)
 s1.display()
 
 s1.add2Tail(654)
+print('----')
+s1.insert(2, 79)
+s1.remove(65)
 s1.display()
