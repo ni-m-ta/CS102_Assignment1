@@ -2,7 +2,7 @@ class MaxHeap:
 
     def __init__(self):
         self.heap_array = []
-        
+
     def percolate_up(self, node_index):
         while node_index > 0:
             # compute the parent node's index
@@ -56,7 +56,7 @@ class MaxHeap:
         print("insert(%d):" % value)
         self.heap_array.append(value)
         
-        # percolate up from the last index to restore heap property.
+        # percolate up from the last index to restore heap property. (the last value goes till the suitable position)
         self.percolate_up(len(self.heap_array) - 1)
         
     def remove(self):
@@ -69,7 +69,7 @@ class MaxHeap:
         if len(self.heap_array) > 0:
             self.heap_array[0] = replace_value
             
-            # percolate down to restore max heap property.
+            # percolate down to restore max heap property. (the last item goes from top to the suitable position)
             self.percolate_down(0)
                 
         # return the max value
