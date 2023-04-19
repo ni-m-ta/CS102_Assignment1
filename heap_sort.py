@@ -35,6 +35,7 @@ def heap_sort(numbers):
         i = i - 1
                 
     i = len(numbers) - 1
+    print(numbers)
     while i > 0:
         # Swap numbers[0] and numbers[i]
         temp = numbers[0]
