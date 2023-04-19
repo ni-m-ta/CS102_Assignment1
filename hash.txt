@@ -1,0 +1,11 @@
+Hashing
+When a provided value is hashed, the hashed value is stored in the hash table
+
+h(v) = v mod 10
+
+1. hashed values = h(v) + i
+2. hashed values = h(v) + i**2
+3. Linked hashed values
+4. double hashed values
+5. Universal hash function
+h(v) = {(av + d) mod b}

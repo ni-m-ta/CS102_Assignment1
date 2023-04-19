@@ -1,4 +1,10 @@
-from django.utils import timezone
-n = timezone.now().minute()
+dict = {}
+for i in range(5):
+    a,b = map(int, input().split())
+    dict.update({a:b})
 
-print(n)
+total = 0
+for k,v in dict.items():
+    total += k*v
+
+print(total)
