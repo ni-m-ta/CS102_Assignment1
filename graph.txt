@@ -1,0 +1,29 @@
+graph representation
+G(V,E)
+V = {a,b,c,d,e}
+E = {ab,da,cb,bc,cc,de}
+{{a}{b},w} => [[a,b],[d,a],...]
+
+adjacentry matrix
+ a b c d e
+a- 1 0 1 0
+b1 -
+c0   -
+d1    -
+e0      -
+
+adjancy list
+heads of linked list
+a->b->d->None
+b->a->e->c->d->None
+c->d->e
+d->a->e
+e->b->d->c
+
+Dijkstras argorithm (try to find the minimum distance between the source and destination)
+a       dif via
+    b   1   a
+    c   3   a
+    d   1+7   b
+    e   1+10  b
+priority queue (input numbers that are not connected to the source point)

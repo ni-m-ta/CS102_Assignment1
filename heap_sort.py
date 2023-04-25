@@ -28,16 +28,15 @@ def max_heap_percolate_down(node_index, heap_list, list_size):
 
 # Sorts the list of numbers using the heap sort algorithm
 def heap_sort(numbers):
-    # Heapify numbers list
+    # Heapify numbers list (Correct max heap)
     i = len(numbers) // 2 - 1
     while i >= 0:
         max_heap_percolate_down(i, numbers, len(numbers))
         i = i - 1
                 
     i = len(numbers) - 1
-    print(numbers)
     while i > 0:
-        # Swap numbers[0] and numbers[i]
+        # Swap numbers[0] and numbers[i] (Get the largest value and put the last position, and limit the range one by one, then sort it in an ascending way)
         temp = numbers[0]
         numbers[0] = numbers[i]
         numbers[i] = temp
