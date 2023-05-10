@@ -32,6 +32,7 @@ def partition(numbers, low, high):
             numbers[i], numbers[j] = numbers[j], numbers[i]
     #最終的にpivotをピボットよりも大きく一番左にある数字を右端に置く
     numbers[i+1], numbers[high] = numbers[high], numbers[i+1]
+    print(numbers)
     return i + 1 # pivotとなる数字のインデックスを返す
 
 def quick_sort(numbers, low, high):
@@ -40,10 +41,10 @@ def quick_sort(numbers, low, high):
         quick_sort(numbers, low, pi-1)
         quick_sort(numbers, pi+1, high)
 
-# lst = [random.randrange(50) for _ in range(6)]
-# print(lst)
-# quick_sort(lst, 0, len(lst)-1)
-# print(lst)
+lst = [14, 29, 1, 0, 3, 33, 37, 42, 55, 61, 32, 21, 23, 27, 13, 7]
+print(lst)
+quick_sort(lst, 0, len(lst)-1)
+print(lst)
 
 def merge(data, start, mid, end):
     data_temp = []
@@ -79,7 +80,7 @@ def merge_sort(data, start, end):
     merge_sort(data, mid + 1, end)
     merge(data, start, mid, end)
 
-lst = [random.randrange(50) for _ in range(6)]
-print(lst)
-merge_sort(lst, 0, len(lst)-1)
-print(lst)
+# lst = [random.randrange(50) for _ in range(6)]
+# print(lst)
+# merge_sort(lst, 0, len(lst)-1)
+# print(lst)

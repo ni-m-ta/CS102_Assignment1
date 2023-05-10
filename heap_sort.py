@@ -45,7 +45,7 @@ def heap_sort(numbers):
         i = i - 1
 
 # Main program to test the heap sort algorithm.
-numbers = [82, 36, 49, 82, 34, 75, 18, 9, 23]
+numbers = [1, 19, 7, 5, 6, 42, 21, 13, 56, 78, 29, 3, 14]
 print("UNSORTED:", numbers)
 
 heap_sort(numbers)
